@@ -7,3 +7,9 @@ spring:
       host: localhost
       port: 27017
       database: stocktrakr
+
+stock:
+  client:
+    brapi:
+      url: https://brapi.dev/api/quote
+      token: wbV85vPu4sbeZQiAFzcPpJ

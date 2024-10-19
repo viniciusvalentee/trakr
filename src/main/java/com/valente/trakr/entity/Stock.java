@@ -6,6 +6,7 @@ import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Getter
@@ -22,7 +23,7 @@ public class Stock {
     private String stock;
 
     @Transient
-    private String price; // Não salva no banco, vem da controller
+    private BigDecimal price; // Não salva no banco, vem da controller
 
     @DBRef
     private List<StockPurchase> purchases;

@@ -7,9 +7,24 @@ spring:
       host: localhost
       port: 27017
       database: stocktrakr
+    redis:
+      host: localhost
+      port: 6379
+      password: sa
+  cache:
+    redis:
+      time-to-live: 60000
 
+springdoc:
+  api-docs:
+    path: /api/api-docs
+  swagger-ui:
+    path: swagger/index.html
 stock:
   client:
     brapi:
       url: https://brapi.dev/api/quote
       token: wbV85vPu4sbeZQiAFzcPpJ
+
+security:
+  secretLoginKey: 'minha-chave-secreta'

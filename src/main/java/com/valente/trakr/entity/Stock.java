@@ -1,5 +1,6 @@
 package com.valente.trakr.entity;
 
+import com.valente.trakr.repository.User;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
@@ -28,5 +29,6 @@ public class Stock {
     @DBRef
     private List<StockPurchase> purchases;
 
-    //private User user;
+    @DBRef
+    private User user;
 }
